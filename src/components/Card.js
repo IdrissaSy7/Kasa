@@ -1,12 +1,17 @@
 import React from "react";
+import Logements from "../logements.json";
 
 const Card = () => {
   return (
     <div className="cardContainer">
-      <div className="card">
-        <h2>Titre de la location</h2>
-        <img src="" alt="image de la location" />
-      </div>
+      {Logements.map((logement) => (
+        <a>
+          <div key={logement.id} className="card">
+            <h2>{logement.title}</h2>
+            <img src={logement.cover} alt={logement.title} />
+          </div>
+        </a>
+      ))}
     </div>
   );
 };
