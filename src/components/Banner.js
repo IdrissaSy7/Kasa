@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import image1 from '../assets/img/banner1.png';
-import image2 from '../assets/img/banner2.png';
+import image1 from "../assets/img/banner1.png";
+import image2 from "../assets/img/banner2.png";
 
 const Banner = () => {
   const location = useLocation();
