@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $color-4;
+  height: 200px;
+
+  img {
+    margin-bottom: 70px;
+  }
+
+  p {
+    color: $color-1;
+    font-size: 1.1em;
+  }
+
+  @media screen and (max-width: 767px) {
+    img {
+      margin-bottom: 30px;
+      width: auto;
+      height: 40px;
+    }
+
+    p {
+      font-size: 0.7em;
+    }
+  }
+}

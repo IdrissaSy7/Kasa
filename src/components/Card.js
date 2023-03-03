@@ -5,8 +5,8 @@ const Card = () => {
   return (
     <div className="cardContainer">
       {Logements.map((logement) => (
-        <a>
-          <div key={logement.id} className="card">
+        <a key={logement.id}>
+          <div className="card">
             <h2>{logement.title}</h2>
             <img src={logement.cover} alt={logement.title} />
           </div>

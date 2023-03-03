@@ -1,8 +1,8 @@
 .navigation {
   margin: 20px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   img {
     width: auto;
@@ -39,7 +39,7 @@
     }
 
     a {
-      font-size: 0.9em;
+      font-size: 0.8em;
       text-transform: uppercase;
 
       &:nth-child(1) {
