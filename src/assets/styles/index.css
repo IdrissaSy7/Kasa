@@ -9,7 +9,7 @@
 
 body {
   background-color: #fff;
-  font-family: "font-1";
+  font-family: "font-1", sans-serif;
 }
 
 .navigation {
