@@ -1,16 +1,17 @@
 import React from "react";
 import Logements from "../logements.json";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
     <div className="cardContainer">
       {Logements.map((logement) => (
-        <a key={logement.id}>
+        <Link key={logement.id} to={`/projets/${logement.id}`}>
           <div className="card">
             <h2>{logement.title}</h2>
             <img src={logement.cover} alt={logement.title} />
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );
