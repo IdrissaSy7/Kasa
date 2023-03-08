@@ -13,7 +13,7 @@ const Collapse = (props) => {
           </span>
         ) : (
           <span className="chevron">
-            <i classNam="fa-solid fa-chevron-down"></i>
+            <i className="fa-solid fa-chevron-down"></i>
           </span>
         )}
       </h3>
