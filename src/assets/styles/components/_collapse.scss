@@ -1,0 +1,27 @@
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 120px;
+
+  .toggle {
+    background-color: $color-2;
+    color: $color-1;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content {
+    background-color: $color-5;
+    color: $color-2;
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 20px 20px;
+  }
+}

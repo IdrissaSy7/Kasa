@@ -58,7 +58,7 @@ body {
 
 .banner {
   margin: 30px 40px;
-  height: 240px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,10 +100,6 @@ body {
     width: 60%;
     margin-left: -70px;
   }
-}
-
-#banner2 {
-  height: 240px;
 }
 
 .cardContainer {
@@ -161,6 +157,33 @@ body {
   }
 }
 
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 120px;
+}
+.collapse .toggle {
+  background-color: #ff6060;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.3em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.collapse .content {
+  background-color: #f7f7f7;
+  color: #ff6060;
+  padding: 15px;
+}
+@media screen and (max-width: 767px) {
+  .collapse {
+    margin: 20px 20px;
+  }
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -168,6 +191,7 @@ body {
   flex-direction: column;
   background-color: #000;
   height: 200px;
+  margin-top: 100px;
 }
 .footer img {
   margin-bottom: 70px;
@@ -206,7 +230,7 @@ body {
   color: #ff6060;
   list-style-type: none;
   text-decoration: none;
-  margin: 120px 0px;
+  margin: 120px 0px 0px 0px;
 }
 .error a:hover {
   text-decoration: underline;
