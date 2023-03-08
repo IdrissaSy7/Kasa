@@ -7,7 +7,6 @@ const Collapse = (props) => {
     <div className="collapse">
       <h3 className="toggle" onClick={() => setIsOpen(!isOpen)}>
         {props.label}
-        {/* Ternaire ? : */}
         {isOpen ? (
           <span className="chevron">
             <i className="fa-solid fa-chevron-up"></i>
