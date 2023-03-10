@@ -5,7 +5,7 @@ const Collapse = (props) => {
 
   return (
     <div className="collapse">
-      <h3 className="toggle" onClick={() => setIsOpen(!isOpen)}>
+      <h3 onClick={() => setIsOpen(!isOpen)}>
         {props.label}
         {isOpen ? (
           <span className="chevron">

@@ -2,5 +2,71 @@
   margin: 20px 40px;
   h1 {
     color: $color-2;
+    width: 80%;
+  }
+
+  h2 {
+    color: $color-2;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
+    p {
+      background-color: $color-2;
+      color: $color-1;
+      font-size: 0.8em;
+      padding: 5px 25px;
+      margin-right: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 20px 20px;
+
+    h1 {
+      font-size: 1.2em;
+    }
+
+    h2 {
+      font-size: 0.8em;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        font-size: 0.6em;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .host {
+    position: absolute;
+    right: 10px;
+    top: 490px;
+
+    img {
+      width: auto;
+      height: 64px;
+      border-radius: 50%;
+    }
+
+    p {
+      color: $color-2;
+      position: relative;
+      right: 80px;
+      top: 53px;
+      width: 50%;
+      text-align: center;
+    }
   }
 }
