@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Up from "../assets/img/up.png";
+import Down from "../assets/img/down.png";
 
 const Collapse = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +11,11 @@ const Collapse = (props) => {
         {props.label}
         {isOpen ? (
           <span className="chevron">
-            <i className="fa-solid fa-chevron-up"></i>
+            <img src={Up} alt="Fleche vers le haut" />
           </span>
         ) : (
           <span className="chevron">
-            <i className="fa-solid fa-chevron-down"></i>
+            <img src={Down} alt="Fleche vers le bas" />
           </span>
         )}
       </h3>

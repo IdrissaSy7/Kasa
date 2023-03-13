@@ -6,17 +6,22 @@
   h3 {
     background-color: $color-2;
     color: $color-1;
-    padding: 10px;
-    border-radius: 5px;
     font-size: 1.3em;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+
+    img {
+      width: auto;
+      height: 12px;
+      margin-right: 10px;
+    }
   }
 
   .content {
     background-color: $color-5;
     color: $color-2;
-    padding: 15px;
+    margin-top: -10px;
+    z-index: -1;
   }
 }
