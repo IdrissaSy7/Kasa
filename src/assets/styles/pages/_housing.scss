@@ -50,6 +50,22 @@
     align-items: flex-start;
     margin-top: 15px;
     position: relative;
+
+    .tags {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+
+      p {
+        background-color: $color-2;
+        color: $color-1;
+        font-size: 0.8em;
+        padding: 5px 15px;
+        margin-right: 10px;
+        border-radius: 10px;
+        text-align: center;
+      }
+    }
   }
 
   .housedetails3 {
@@ -100,11 +116,12 @@
 
         h2 {
           font-size: 0.9em;
+          margin-bottom: -10px;
         }
       }
 
       .host {
-        top: 100px;
+        top: 120px;
 
         img {
           height: 32px;
@@ -119,14 +136,18 @@
 
     .housedetails2 {
       flex-direction: column;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
 
       .tags {
+        height: 80px;
+        flex-wrap: wrap;
+        align-items: center;
+
         p {
-          font-size: 0.6em;
-          padding: 5px;
-          margin-bottom: 40px;
-          margin-right: 5px;
+          padding: 5px 15px;
+          margin-bottom: 10px;
+          height: 15px;
+          border-radius: 5px;
         }
       }
     }
@@ -142,16 +163,6 @@
 
       .description {
         margin-bottom: 25px;
-      }
-    }
-
-    @media screen and (max-width: 374px) {
-      .housedetails2 {
-        .tags {
-          p {
-            font-size: 0.45em;
-          }
-        }
       }
     }
   }
