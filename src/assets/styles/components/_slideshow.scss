@@ -3,11 +3,14 @@
   position: relative;
 
   .LeftArrow {
-    left: 22px;
+    left: 0px;
+    img {
+      left: 20px;
+    }
   }
 
   .RightArrow {
-    right: 22px;
+    right: 0px;
   }
 
   .LeftArrow,
@@ -17,10 +20,14 @@
     transform: translate(0, -50%);
     z-index: 1;
     cursor: pointer;
+    width: 70px;
+    height: 400px;
 
     img {
       width: auto;
       height: 80px;
+      position: relative;
+      top: 155px;
     }
   }
 
@@ -46,9 +53,29 @@
 
     .LeftArrow,
     .RightArrow {
+      width: 40px;
+      height: 260px;
+      top: 46%;
+
       img {
         width: auto;
-        height: 30px;
+        height: 20px;
+        position: relative;
+        top: 120px;
+      }
+    }
+
+    .LeftArrow {
+      left: 0px;
+      img {
+        left: 10px;
+      }
+    }
+
+    .RightArrow {
+      right: 0px;
+      img {
+        left: 18px;
       }
     }
 

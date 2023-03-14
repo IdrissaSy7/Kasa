@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
@@ -11,6 +11,10 @@ import Collapse from "../components/Collapse";
 const Home = () => {
   const { id } = useParams();
   const logement = Logements.find((p) => p.id === id);
+
+  if (!logement) {
+    return <Navigate to="/erreur" />;
+  }
 
   const equipements = logement.equipments.map((equipements, index) => ({
     id: `${index}`,
