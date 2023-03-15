@@ -8,17 +8,20 @@
   border-radius: 10px;
 
   img {
-    background: url(../../img/banner1.png);
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
     filter: brightness(0.7);
-
-    &_about {
-      background: url(../../img/banner2.png) center/cover;
-    }
   }
+
+  // p {
+  //   color: $color-1;
+  //   position: absolute;
+  //   z-index: 1;
+  //   font-size: 2.5em;
+  //   text-align: center;
+  // }
 
   p {
     color: $color-1;
@@ -44,5 +47,11 @@
       width: 60%;
       margin-left: -70px;
     }
+  }
+}
+
+#banner2 {
+  @media screen and (max-width: 767px) {
+    height: 200px;
   }
 }

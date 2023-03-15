@@ -27,21 +27,21 @@ const Home = () => {
       <Slideshow />
       <div className="housing">
         <div className="housedetails">
-          <div className="housename">
-            <h1>{logement.title}</h1>
-            <h2>{logement.location}</h2>
-          </div>
-          <div className="host">
-            <p>{logement.host.name}</p>
-            <img
-              src={logement.host.picture}
-              alt="Image de profil de l'hébergeur"
-            />
-          </div>
+          <h1>{logement.title}</h1>
+          <h2>{logement.location}</h2>
         </div>
         <div className="housedetails2">
           <Tags />
-          <Ratings />
+          <div className="ratingshost">
+            <Ratings />
+            <div className="host">
+              <p>{logement.host.name}</p>
+              <img
+                src={logement.host.picture}
+                alt="Image de profil de l'hébergeur"
+              />
+            </div>
+          </div>
         </div>
         <div className="housedetails3">
           <div className="description">

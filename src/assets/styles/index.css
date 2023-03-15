@@ -22,16 +22,12 @@ body {
   border-radius: 10px;
 }
 .banner img {
-  background: url(../../img/banner1.png);
   width: 100%;
   height: 100%;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(0.7);
-}
-.banner img_about {
-  background: url(../../img/banner2.png) center/cover;
 }
 .banner p {
   color: #fff;
@@ -55,6 +51,12 @@ body {
     text-align: left;
     width: 60%;
     margin-left: -70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner2 {
+    height: 200px;
   }
 }
 
@@ -148,7 +150,7 @@ body {
   margin-top: 100px;
 }
 .footer img {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 .footer p {
   color: #fff;
@@ -215,6 +217,7 @@ body {
 .ratings img {
   width: auto;
   height: 20px;
+  margin-right: 3px;
 }
 @media screen and (max-width: 767px) {
   .ratings img {
@@ -224,13 +227,17 @@ body {
 
 .sliderComponent {
   margin: 20px 40px;
+  height: 420px;
   position: relative;
 }
 .sliderComponent .LeftArrow {
-  left: 22px;
+  left: 0px;
+}
+.sliderComponent .LeftArrow img {
+  left: 20px;
 }
 .sliderComponent .RightArrow {
-  right: 22px;
+  right: 0px;
 }
 .sliderComponent .LeftArrow,
 .sliderComponent .RightArrow {
@@ -239,11 +246,15 @@ body {
   transform: translate(0, -50%);
   z-index: 1;
   cursor: pointer;
+  width: 70px;
+  height: 400px;
 }
 .sliderComponent .LeftArrow img,
 .sliderComponent .RightArrow img {
   width: auto;
   height: 80px;
+  position: relative;
+  top: 155px;
 }
 .sliderComponent .slider Img {
   width: 100%;
@@ -262,31 +273,37 @@ body {
 @media screen and (max-width: 767px) {
   .sliderComponent {
     margin: 20px 20px;
+    height: 280px;
+  }
+  .sliderComponent .LeftArrow,
+  .sliderComponent .RightArrow {
+    width: 40px;
+    height: 260px;
+    top: 46%;
   }
   .sliderComponent .LeftArrow img,
   .sliderComponent .RightArrow img {
     width: auto;
-    height: 30px;
+    height: 20px;
+    position: relative;
+    top: 120px;
+  }
+  .sliderComponent .LeftArrow {
+    left: 0px;
+  }
+  .sliderComponent .LeftArrow img {
+    left: 10px;
+  }
+  .sliderComponent .RightArrow {
+    right: 0px;
+  }
+  .sliderComponent .RightArrow img {
+    left: 18px;
   }
   .sliderComponent .slider img {
     height: 260px;
     border-radius: 10px;
   }
-}
-
-.tags {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-}
-.tags p {
-  background-color: #ff6060;
-  color: #fff;
-  font-size: 0.8em;
-  padding: 5px 15px;
-  margin-right: 10px;
-  border-radius: 10px;
-  text-align: center;
 }
 
 .CollapseAbout {
@@ -306,6 +323,7 @@ body {
 @media screen and (max-width: 767px) {
   .CollapseAbout {
     margin: 20px 20px;
+    font-size: 0.8em;
   }
 }
 
@@ -341,6 +359,7 @@ body {
   }
   .error p:nth-child(2) {
     font-size: 1em;
+    width: 60%;
   }
   .error a {
     margin: 90px 0px;
@@ -351,53 +370,56 @@ body {
   margin: 20px 40px;
 }
 .housing .housedetails {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.housing .housedetails .housename {
   width: 70%;
 }
-.housing .housedetails .housename h1 {
+.housing .housedetails h1 {
   color: #ff6060;
-  font-size: 2em;
 }
-.housing .housedetails .housename h2 {
+.housing .housedetails h2 {
   color: #ff6060;
   font-size: 1em;
   margin-top: 10px;
-}
-.housing .housedetails .host {
-  display: flex;
-  align-items: center;
-  position: relative;
-  bottom: 10px;
-}
-.housing .housedetails .host img {
-  width: auto;
-  height: 64px;
-  border-radius: 50%;
-}
-.housing .housedetails .host p {
-  color: #ff6060;
-  width: 70px;
-  text-align: center;
-  position: relative;
-  right: 20px;
-  text-align: end;
 }
 .housing .housedetails2 {
   display: flex;
   align-items: flex-start;
   margin-top: 15px;
+}
+.housing .housedetails2 .tags {
+  display: flex;
+  width: 100%;
+}
+.housing .housedetails2 .tags p {
+  background-color: #ff6060;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.housing .housedetails2 .host {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 40px;
+  top: 540px;
+}
+.housing .housedetails2 .host img {
+  width: auto;
+  height: 64px;
+  border-radius: 50%;
+}
+.housing .housedetails2 .host p {
+  color: #ff6060;
+  width: 70px;
   position: relative;
+  right: 20px;
+  text-align: end;
 }
 .housing .housedetails3 {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .housing .housedetails3 h3,
 .housing .housedetails3 .content {
@@ -422,54 +444,61 @@ body {
 }
 @media screen and (max-width: 767px) {
   .housing {
-    margin: 20px 20px;
+    margin: -20px 20px;
   }
   .housing .housedetails {
-    align-items: flex-end;
-  }
-  .housing .housedetails .housename {
     width: 100%;
   }
-  .housing .housedetails .housename h1 {
+  .housing .housedetails h1 {
     font-size: 1.1em;
   }
-  .housing .housedetails .housename h2 {
+  .housing .housedetails h2 {
     font-size: 0.9em;
-  }
-  .housing .housedetails .host {
-    top: 100px;
-  }
-  .housing .housedetails .host img {
-    height: 32px;
-  }
-  .housing .housedetails .host p {
-    font-size: 0.8em;
-    width: 50px;
   }
   .housing .housedetails2 {
     flex-direction: column;
-    margin-bottom: 50px;
+  }
+  .housing .housedetails2 .tags {
+    flex-wrap: wrap;
   }
   .housing .housedetails2 .tags p {
-    font-size: 0.6em;
-    padding: 5px;
-    margin-bottom: 40px;
-    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+  }
+  .housing .housedetails2 .ratingshost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .housing .housedetails2 .ratingshost .host {
+    position: initial;
+  }
+  .housing .housedetails2 .ratingshost .host img {
+    height: 32px;
+  }
+  .housing .housedetails2 .ratingshost .host p {
+    font-size: 0.9em;
   }
   .housing .housedetails3 {
     flex-direction: column;
   }
+  .housing .housedetails3 h3 {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  .housing .housedetails3 .content {
+    height: 150%;
+    font-size: 0.9em;
+  }
   .housing .housedetails3 .description,
   .housing .housedetails3 .equipments {
     width: 100%;
-    font-size: 0.8em;
   }
   .housing .housedetails3 .description {
     margin-bottom: 25px;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 374px) {
-  .housing .housedetails2 .tags p {
-    font-size: 0.45em;
   }
 }/*# sourceMappingURL=index.css.map */
